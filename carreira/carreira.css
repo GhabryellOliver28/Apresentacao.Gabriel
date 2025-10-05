@@ -73,7 +73,7 @@ h1{
     margin: 20px;
 }
 .cabecalho-sub-titulo{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: var(--claro);
    
 }
@@ -85,6 +85,8 @@ h1{
     object-fit: cover;
     border: 4px solid var(--primaria);
     margin-bottom: 1rem;
+    animation: flutuar 3s ease-in-out infinite;
+    
 }
 
 .sobre{
@@ -166,11 +168,93 @@ h1{
     text-align: center;
 }
 .paragrafo-projetos{
+    text-align: center;
     font-size: 1rem;
     color: var(--claro);
     margin-bottom: 0.5rem;
 }
-.caixa-textos-projetos{
-    padding: 1rem;
+.contatos{
+    padding: 6rem 2rem;
+
+}
+.contatos-titulo{
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+   
+}
+.formulario-contatos{
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--escuro);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    
+}
+
+.campo-form{
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid var(--vidro);
+    border-radius: 8px;
+    color: var(--maisEscuro);
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+}
+
+.campo-form:focus{
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px var(--primaria);
+}
+.grupo-form{
+    margin-bottom: 1.5rem;
+}
+.botao-form{
+    background: var(--primaria);
+    color: var(--claro);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-form:hover{
+    background-color: green;
+    font-weight: bold;
+    transition: 0.5s;
+    transform: translateY(-4px); ;
+}
+
+.rodape{
+    text-align: center;
+    padding: 1rem;
+    background: rgba(15,23,42, 0.8);
+   
+    bottom: 0;
+    width: 100%;
+    color: var(--claro);
+    font-size: 0.9rem;
+}
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: var(--escuro);
+}
+@keyframes flutuar{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
 }
